@@ -9,10 +9,10 @@ node{
   }
   //stage('Email Notification'){}
   
-//   stage('Deploy to Tomcat'){
+  stage('Deploy to Tomcat'){
   
-//     sshagent(['tomcat-dev']) {
-//     sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.6.170:/opt/apache-tomcat-9.0.74/webapps'
-// }
-//   }
+    sshagent(['tomcat-dev']) {
+    sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.6.170:/opt/apache-tomcat-9.0.74/webapps'
+}
+  }
 }
